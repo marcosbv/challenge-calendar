@@ -1,0 +1,80 @@
+.table_element {
+    text-align: center;
+    width: 20px;
+    height: 20px;
+    table-layout: fixed;
+    border-width: 1px;
+    border-style: solid;
+    border-spacing: 0px;
+    border-radius: 50%;
+    border-color: blue;
+}
+
+.table_header {
+    background-color: blue;
+    color: white;
+    border-style: solid;
+    border-color: blue;
+}
+
+.not_selected {
+   border-color: blue;
+}
+.today {
+   border-color: red;
+}
+
+.selected {
+    background-color: blue;
+    color: white;
+    border-color: red;
+
+}
+
+.scheduled {
+    background-color: blue;
+    color: white;
+    border-color: blue;
+    opacity: 0.7;
+}
+
+.monthButton {
+    width: 27px;
+    height: 20px;
+    text-align: center;
+}
+
+.disabled {
+    color: gray;
+}
+
+button {
+    color: white;
+    background-color: blue;
+}
+
+.controlButton {
+    text-align: "center";
+    margin-left: "100px";
+}
+
+#calendar_div {
+    display: inline-block;
+}
+
+#calendar_component {
+    display: inline-block;
+    border: 1px solid blue;
+    padding: 10px;
+}
+
+#appoitmentTable {
+    background-color: blue;
+    color: white;
+    font-style: bold;
+    overflow: scroll;
+}
+
+td:hover {
+    cursor: default;
+}

@@ -1,0 +1,169 @@
+{
+    "input_group_parameters":[
+        
+    ],
+    "template_input_params": [
+        {
+            "name": "project",
+            "description": "Nome do Projeto do Open Stack onde a máquina deverá ser criada.",
+            "type": "string",
+            "required": true,
+            "secured": false,
+            "label": "Nome do Projeto OpenStack",
+            "hidden": false,
+            "immutable": false
+      },
+      {
+        "name": "instance_name",
+        "description": "Nome da Instância a ser Criada",
+        "type": "string",
+        "required": true,
+        "secured": false,
+        "label": "Nome da Instancia",
+        "hidden": false,
+        "immutable": false
+     },
+     {
+        "name": "image_id",
+        "description": "UUID da imagem base dessa instância.",
+        "type": "string",
+        "required": true,
+        "secured": false,
+        "label": "ID da Imagem",
+        "hidden": false,
+        "immutable": false
+  },
+  {
+    "name": "flavor_name",
+    "description": "Nome do Flavor que corresponde ao tamanho da máquina a ser cadastrada.",
+    "type": "string",
+    "required": true,
+    "secured": false,
+    "label": "Nome do Flavor",
+    "hidden": false,
+    "immutable": false
+},
+{
+    "name": "key_pair",
+    "description": "Nome da chave publica/privada associada a instancia.",
+    "type": "string",
+    "required": true,
+    "secured": false,
+    "label": "Key Pair",
+    "hidden": false,
+    "immutable": false
+},
+{
+    "name": "security_groups",
+    "description": "Lista dos grupos de segurança a serem associados a essa instância.",
+    "type": "list",
+    "required": false,
+    "secured": false,
+    "label": "Security Groups",
+    "hidden": false,
+    "immutable": false
+},
+{
+    "name": "disk_names",
+    "description": "Lista dos nomes de discos a serem criados e anexados a instância.",
+    "type": "list",
+    "required": false,
+    "secured": false,
+    "label": "Nomes dos discos",
+    "hidden": false,
+    "immutable": false
+},
+{
+    "name": "disk_sizes",
+    "description": "Lista dos tamanhos dos discos a serem criados e anexados a instância.",
+    "type": "list",
+    "required": false,
+    "secured": false,
+    "label": "Tamanhos dos Discos",
+    "hidden": false,
+    "immutable": false
+},
+{
+    "name": "disk_volume_types",
+    "description": "Lista dos tipos de volume a serem associados e anexados a instância (HDD/SDD).",
+    "type": "list",
+    "required": false,
+    "secured": false,
+    "label": "Tipos de Volume",
+    "hidden": false,
+    "immutable": false
+},
+{
+    "name": "network_names",
+    "description": "Lista dos UUIDs das redes previamente criadas a serem anexados a instância.",
+    "type": "list",
+    "required": true,
+    "secured": false,
+    "label": "UUIDs das Redes",
+    "hidden": false,
+    "immutable": false
+},
+{
+    "name": "public_ip",
+    "description": "Identifica se a instância deve ter um IP Floating ou não (Floating IP será alocado automaticamente)",
+    "type": "string",
+    "required": false,
+    "secured": false,
+    "label": "IP Publico Automatico",
+    "hidden": false,
+    "immutable": false,
+    "default": "false"
+},
+{
+    "name": "user_data",
+    "description": "Arquivo inline para Cloud-Init",
+    "type": "string",
+    "required": false,
+    "secured": false,
+    "label": "Inline Cloud Init",
+    "hidden": false,
+    "immutable": false
+},
+{
+    "name": "existent_disk_ids",
+    "description": "Lista dos UUIDs de discos existentes a serem anexados a instancia.",
+    "type": "list",
+    "required": false,
+    "secured": false,
+    "label": "UUIDs de Discos Existentes",
+    "hidden": false,
+    "immutable": false
+},
+{
+    "name": "existent_floating_ip",
+    "description": "IP Floating já existente a ser associado a essa máquina (IP Publico Automatico deverá ser false para essa opção funcionar)",
+    "type": "string",
+    "required": false,
+    "secured": false,
+    "label": "IP Floating Existente a Associar",
+    "hidden": false,
+    "immutable": false
+},
+{
+    "name": "existent_fixed_ip",
+    "description": "IP da interface a ser associado (Quando houver um Floating IP já existente)",
+    "type": "string",
+    "required": false,
+    "secured": false,
+    "label": "IP Fixo da Interface para Associacao com IP Floating",
+    "hidden": false,
+    "immutable": false
+},
+{
+    "name": "metadata",
+    "description": "Metadados da instancia.",
+    "type": "map",
+    "required": false,
+    "secured": false,
+    "label": "Metadados da instancia.",
+    "hidden": false,
+    "immutable": false
+}
+    ],
+    "template_output_params" : []
+}
